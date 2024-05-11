@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>AdminLTE 2 | Log in</title>
+
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport">
+
+<link rel="stylesheet"
+	th:href="@{/assets/css/bootstrap.min.css}">
+
+<link rel="stylesheet"
+	th:href="@{/assets/css/font-awesome.min.css}">
+
+<link rel="stylesheet"
+	href="../../bower_components/Ionicons/css/ionicons.min.css">
+
+
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+
+
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<script nonce="633eace0-c4cc-40eb-b89d-bf49c423dc80">try{(function(w,d){!function(b,c,d,e){b[d]=b[d]||{};b[d].executed=[];b.zaraz={deferred:[],listeners:[]};b.zaraz.q=[];b.zaraz._f=function(f){return async function(){var g=Array.prototype.slice.call(arguments);b.zaraz.q.push({m:f,a:g})}};for(const h of["track","set","debug"])b.zaraz[h]=b.zaraz._f(h);b.zaraz.init=()=>{var i=c.getElementsByTagName(e)[0],j=c.createElement(e),k=c.getElementsByTagName("title")[0];k&&(b[d].t=c.getElementsByTagName("title")[0].text);b[d].x=Math.random();b[d].w=b.screen.width;b[d].h=b.screen.height;b[d].j=b.innerHeight;b[d].e=b.innerWidth;b[d].l=b.location.href;b[d].r=c.referrer;b[d].k=b.screen.colorDepth;b[d].n=c.characterSet;b[d].o=(new Date).getTimezoneOffset();if(b.dataLayer)for(const o of Object.entries(Object.entries(dataLayer).reduce(((p,q)=>({...p[1],...q[1]})),{})))zaraz.set(o[0],o[1],{scope:"page"});b[d].q=[];for(;b.zaraz.q.length;){const r=b.zaraz.q.shift();b[d].q.push(r)}j.defer=!0;for(const s of[localStorage,sessionStorage])Object.keys(s||{}).filter((u=>u.startsWith("_zaraz_"))).forEach((t=>{try{b[d]["z_"+t.slice(7)]=JSON.parse(s.getItem(t))}catch{b[d]["z_"+t.slice(7)]=s.getItem(t)}}));j.referrerPolicy="origin";j.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(b[d])));i.parentNode.insertBefore(j,i)};["complete","interactive"].includes(c.readyState)?zaraz.init():b.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script>
+
+</head>
+<body class="hold-transition login-page">
+	<div class="login-box">
+		
+
+		<section class="bg-light py-3 py-md-5" style="margin-top: 75px;">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+						<div class="card border border-light-subtle rounded-3 shadow-sm">
+							<div class="card-body p-3 p-md-4 p-xl-5">
+								<div class="text-center mb-3">
+									<div class="login-logo">
+										<a href="@{/assets/css/AdminLTE.css}" style="font-size:34px; text-decoration:none;"><b>Admin</b>DUCK</a>
+									</div>
+									<a href="#!"> <img th:src="@{assets/images/duck-logo-header.jpg}"
+										alt="BootstrapBrain Logo" width="175"  style=" height: auto;"
+   										>
+									</a>
+								</div>
+								<h2 class="fs-6 fw-normal text-center text-secondary mb-4">Sign
+									in to your account</h2>
+								<form th:action="@{/logon}" method="post">
+									<div class="row gy-2 overflow-hidden">
+										<div class="col-12">
+											<div class="form-floating mb-3">
+												<input type="text" class="form-control"
+													placeholder="UserName" name="username"> <span
+													class="glyphicon glyphicon-envelope form-control-feedback"></span>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-floating mb-3">
+												<input type="password" class="form-control"
+													placeholder="Password" name="password"> <span
+													class="glyphicon glyphicon-lock form-control-feedback"></span>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="d-flex gap-2 justify-content-between">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														name="rememberMe" id="rememberMe"> <label
+														class="form-check-label text-secondary" for="rememberMe"
+														style="font-weight: 400;"> Keep me logged in </label>
+												</div>
+												<a href="#!" class="link-primary text-decoration-none">Forgot
+													password?</a>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="d-grid my-3">
+												<button class="btn btn-primary btn-lg" type="submit">Log
+													in</button>
+											</div>
+										</div>
+										<div class="col-12">
+											<p class="m-0 text-secondary text-center">
+												Don't have an account? <a href="#!"
+													class="link-primary text-decoration-none">Sign up</a>
+											</p>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+
+
+	<script th:src="@{assets/js/jquery.min.js}"></script>
+
+	<script th:src="@{assets/js/bootstrap.min.js}"></script>
+
+	<script src="../../plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+    });
+  });
+</script>
+</body>
+</html>

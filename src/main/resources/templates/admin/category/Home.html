@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/extras/spring-security6" lang="en">
+<head th:replace="admin/Layout/head::head"></head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+ <header th:replace="admin/Layout/header::header"></header>
+
+  <!-- =============================================== -->
+
+  <!-- Left side column. contains the sidebar -->
+<div th:replace="admin/Layout/sidebar::sidebar"></div>
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        TRANG QUẢN TRỊ DUCKS-SHOP
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Examples</a></li>
+        <li class="active">Blank page</li>
+      </ol>
+    </section>
+
+   </div>
+  <!-- /.content-wrapper -->
+
+<div th:replace="admin/Layout/footer::footer"></div>
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+
+<div th:replace="admin/Layout/Script::script"></div>
+</body>
+</html>
